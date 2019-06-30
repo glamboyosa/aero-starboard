@@ -35,6 +35,6 @@ const renderUI = data => {
   elements.renderElements.insertAdjacentHTML('beforeEnd', markup);
 };
 export const renderLikes = likes => {
-  //   likes.forEach(renderUI);
-  renderUI(likes);
+  likes.forEach(curr => console.log(curr));
+  likes.forEach(renderUI);
 };

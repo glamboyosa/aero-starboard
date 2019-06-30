@@ -68,16 +68,15 @@ const renderLikes = async e => {
   console.log(id);
   e.preventDefault();
   if (!state.likes) state.likes = new Like();
-  if (!state.likes.isLiked()) {
+  if (!state.likes.isLiked(id)) {
     state.gif = new Item(id);
     await state.gif.getItem();
-    //toggle button
-    likesView.toggleLikeBtn(true);
+    if (!state.likes.isLiked(id)) {
+      //toggle button
+      likesView.toggleLikeBtn(true);
+    }
     console.log(state.gif.results[0].media[0].gif.url, state.gif.results[0].id);
-    state.likes.addLikes(
-      state.gif.results[0].media[0].gif.url,
-      state.gif.results[0].id
-    );
+    state.likes.addLikes(state.gif.results[0].media[0].gif.url, id);
   } else {
     likesView.toggleLikeBtn(false);
     state.likes.deleteLikes(id);
@@ -94,14 +93,14 @@ window.addEventListener('load', () => {
 });
 const dispLike = () => {
   try {
-    if (state.likes.likes) {
+    if (state.likes.likes.length >= 1) {
       console.log('were in business');
       //prep UI
       clearData();
-      renderLoader();
+      renderLoader(elements.renderedInformationLoader);
       clearLoader();
-      // likesView.renderLikes(state.likes.likes);
-   state.likes.likes.map(curr=> likesView.renderLikes(curr))
+      //display item
+      likesView.renderLikes(state.likes.likes);
     }
   } catch (e) {
     alert(`something went wrong ${e}`);

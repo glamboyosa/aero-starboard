@@ -14,7 +14,7 @@ const renderUI = data => {
                </div>
                 
                <div class ="col span-1-of-2">
-               <a href="#${data.id}" >
+               <a href="#${data.id}" class="a" >
                <button class="recipe__love">
                <svg class="header__likes">    
                <use href="css/img/icons.svg#icon-heart-outlined"></use>
