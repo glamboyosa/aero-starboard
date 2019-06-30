@@ -78,7 +78,7 @@ section {
 }
 .gif__image {
   width: 50%;
-  height:auto;
+  height: auto;
   /* padding: 5px 10px; */
   box-shadow: 5px 10px 8px 10px #000;
 }
@@ -122,8 +122,8 @@ section {
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  height: 4.5rem;
-  width: 4.5rem;
+  height: 3.5rem;
+  width: 3.5rem;
   margin-left: auto;
   transition: all 0.2s;
   display: flex;
@@ -131,7 +131,7 @@ section {
   justify-content: center;
 }
 .recipe__love:hover {
-  transform: scale(1.07);
+  transform: scale(1);
 }
 .recipe__love:focus {
   outline: none;
@@ -170,16 +170,14 @@ section {
 .btn-inline:focus {
   outline: none;
 }
-.space {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.search img {
+  margin-left: 28%;
 }
 
 /*Queries*/
 @media only screen and (max-width: 768px) {
   html,
   body {
-    font-size: 15px;
+    font-size: 13px;
   }
 }

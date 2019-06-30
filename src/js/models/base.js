@@ -3,8 +3,11 @@ export const elements = {
   renderedInformationLoader: document.querySelector(
     '.rendered__information-loader'
   ),
+  form: document.querySelector('.form__class'),
+  inputValue: document.querySelector('.form__class--input'),
   renderElements: document.querySelector('.top__down'),
-  btn: document.querySelector('.results__pages')
+  btn: document.querySelector('.results__pages'),
+  like: document.querySelector('.like')
 };
 export const renderLoader = parent => {
   const markup = `
@@ -20,4 +23,7 @@ export const renderLoader = parent => {
 export const clearLoader = () => {
   const element = document.querySelector('.loader');
   element.parentElement.removeChild(element);
+};
+export const clearData = () => {
+  elements.renderElements.innerHTML = '';
 };
