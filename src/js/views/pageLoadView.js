@@ -3,9 +3,12 @@ const renderUI = data => {
   console.log(data.media[0]);
   const markup = `  
         <div class="search" >      
-        <a href="#${data.id}">
-            <img src="${data.media[0].gif.url}" class="gif__image"></img>
-        </a>  
+        <a href="#${data.id}" class="tooltip" >
+            <img src="${
+              data.media[0].gif.url
+            }" title="click through to GIF-only mode" class="gif__image"></img>
+        <span class="tooltip-txt">GIF-only mode</span>
+            </a>  
         <div class="row">   
                <div class="col span-1-of-2">
                <p class="find__gif"> <a href="${

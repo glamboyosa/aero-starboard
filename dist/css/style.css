@@ -73,6 +73,16 @@ section {
   margin-left: 20px;
 }
 /*Main Body*/
+.tooltip-txt{
+  visibility: hidden;
+  position: absolute;
+  top: 10px;
+  bottom: 15px;
+  margin: 0 auto;
+}
+.tooltip:hover .tooltip-txt{
+  visibility:visible;
+}
 .form__class {
   margin-left: 30%;
 }

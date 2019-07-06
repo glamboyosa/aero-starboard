@@ -8,8 +8,10 @@ export const toggleLikeBtn = isLiked => {
 const renderUI = data => {
   const markup = `  
           <div class="search" >      
-          <a href="#${data.id}">
-              <img src="${data.url}" class="gif__image"></img>
+          <a href="#${data.id}" >
+              <img src="${
+                data.url
+              }" title= "click through to GIF-only mode" class="gif__image"></img>
           </a>  
           <div class="row">   
                  <div class="col span-1-of-2">
