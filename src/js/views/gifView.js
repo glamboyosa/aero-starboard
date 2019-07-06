@@ -3,7 +3,7 @@ const renderUI = data => {
   console.log(data.media[0]);
   const markup = `  
         <div class="search" >      
-        <a href="#${data.id}" download>
+        <a href="#${ data.media[0].gif.url}" download>
             <img src="${data.media[0].gif.url}" class="gif__image"></img>
         </a>  
         <div class="row">   
